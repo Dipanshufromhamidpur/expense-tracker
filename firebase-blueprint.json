@@ -1,0 +1,42 @@
+{
+  "entities": {
+    "expense": {
+      "title": "Expense",
+      "description": "A single expense entry",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "amount": { "type": "number" },
+        "currency": { "type": "string" },
+        "category": { "type": "string" },
+        "description": { "type": "string" },
+        "date": { "type": "string" },
+        "createdAt": { "type": "object" },
+        "updatedAt": { "type": "object" }
+      },
+      "required": ["userId", "amount", "currency", "category", "description", "date"]
+    },
+    "userSetting": {
+      "title": "User Setting",
+      "description": "User preferences",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "monthlyBudget": { "type": "number" },
+        "defaultCurrency": { "type": "string" },
+        "updatedAt": { "type": "object" }
+      },
+      "required": ["userId", "monthlyBudget", "defaultCurrency"]
+    }
+  },
+  "firestore": {
+    "expenses/{expenseId}": {
+      "schema": "expense",
+      "description": "Expenses collection"
+    },
+    "userSettings/{userId}": {
+      "schema": "userSetting",
+      "description": "User preferences"
+    }
+  }
+}

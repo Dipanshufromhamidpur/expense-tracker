@@ -1,0 +1,6 @@
+{
+  "name": "Expense Tracker",
+  "description": "A fully functional expense tracker with recurring expenses, beautiful UI, reporting, and settings.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
